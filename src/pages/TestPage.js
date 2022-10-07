@@ -1,5 +1,6 @@
 import {Persons} from "../components/Persons";
 import * as PropTypes from "prop-types";
+import {Schools} from "../components/Schools";
 
 Persons.propTypes = {title: PropTypes.string};
 
@@ -9,7 +10,7 @@ export function TestPage(props) {
         <div className="mx-3">
             <Persons schoolneeded={true} persons={[...persons]} title="alle personen"/>
             <Persons persons={[...persons].filter(p => p.school ==="ANT")} title="Antwerpen"/>
-
+            <Schools schools={persons.map(s => s.school )} title="alle scholen"/>
         </div>
     );
 }

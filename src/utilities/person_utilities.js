@@ -1,3 +1,6 @@
+import * as PropTypes from "prop-types";
+import {School} from "../components/Schools";
+
 function numberOfPersonsForCity(persons, city) {
     //return persons.reduce((counter, p) => counter + (p.city === city && 1), 0);
     //no need for reduce!!!!
