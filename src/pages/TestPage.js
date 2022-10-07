@@ -7,7 +7,9 @@ export function TestPage(props) {
     const {persons} = props;
     return (
         <div className="mx-3">
-            <Persons schoolneeded={true} persons={[...persons].sort((pl, pr) => pr.age - pl.age)} title="alle personen"/>
+            <Persons schoolneeded={true} persons={[...persons]} title="alle personen"/>
+            <Persons persons={[...persons].filter(p => p.school ==="ANT")} title="Antwerpen"/>
+
         </div>
     );
 }
